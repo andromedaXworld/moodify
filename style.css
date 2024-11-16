@@ -1,0 +1,149 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 200px;
+    height: auto; 
+    margin-right: px;
+}
+
+h1 {
+    color: #1DB954;
+    text-align: center;
+    font-size: 5rem;
+    padding: 20px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.form-container {
+    background-color: rgba(128, 128, 128, 0.3); 
+    border-radius: 10px; 
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+
+.mood-form {
+    text-align: center;
+}
+
+label {
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 20px;
+    background-color: #1DB954;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: darkgreen ;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    flex-direction: column;
+}
+
+.box {
+    align-items: center;
+    text-align: center;  
+    width: 80%;  
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2{
+    font-size: 50px;
+    color: #1DB954;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    font-family: "Pacifico", cursive;
+}
+
+
+.recommendation {
+    background-color: rgba(128, 128, 128, 0.2); 
+    border-radius: 10px; 
+    padding: 15px; 
+    margin: 10px; 
+    width: 50%;
+    display: flex; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    align-items: center;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+
+.song_about p {
+    font-size: 20px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.song_about .title {
+    color: #f0f0f0; 
+}
+
+.song_about .artist {
+    color: #b3b3b3;
+}
+
+
+.spotify-logo {
+    width: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+
+

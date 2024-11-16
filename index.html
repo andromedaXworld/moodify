@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>moodify: mood-wise music recommendation system</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <img src="../static/logo.png" alt="Moodify Logo" class="logo">
+            <h1>Moodify</h1>
+        </div>
+        
+        <div class="wrapper">
+            <div class="form-container">
+                <div class="mood-form">
+                    <form method="POST" action="/submit">
+                        <label for="mood">how are you feeling today?</label><br>
+                        <input type="text" id="mood" name="mood" placeholder="Enter your mood..." required><br>
+                        <button type="submit">Get Recommendations</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="box">
+                {% if recommendations %}
+                    <h2>Recommendations..</h2>
+                        {% for song in recommendations %}
+                            <div class="recommendation">
+                                <img src="{{ song.album_image_url }}" alt="Album cover photo" class="thumbnail">
+                                <div class="song_about">
+                                    <p class="title"><strong>{{ song.title }}</strong></p>
+                                    <p class="artist"><strong>{{ song.artist }} </strong></p>
+                                    <a href="{{ song.spotify_link }}" target="_blank"> 
+                                        <img src="../static/spotify_logo.png" alt="spotify_logo" class="spotify-logo">
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        
+        
+    </body>
+</html>
